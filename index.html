@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="4793339.png" type="image/x-icon">
+
+  <title>Atena Calc</title>
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header class="cabecalho" id="cabecalho">
+    <nav class="container">
+      <a href="/" class="logo">
+        <b></b><span><br>Atena Calc</span></b>
+      </a>
+      <div class="menu" id="menu">
+        <ul class="lista">
+          <li class="item"><a href="#inicio" class="link">Home</a></li>
+          <li class="item"><a href="#pitagoras" class="link">Teorema de Pitágoras</a></li>
+          <li class="item"><a href="#combinacao" class="link">Análise Combinatória</a></li>
+          <li class="item"><a href="#calculos-gerais" class="link">Resolvedor de Cálculos Gerais</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="principal">
+    <!-- INÍCIO -->
+    <section class="inicio" id="inicio">
+      <div class="container-inicio">
+        <div class="dados-inicio">
+          <h1 class="titulo">MATEMÁTICA</h1>
+          <h2 class="fisica">Entre no mundo fascinante dos números e cálculos.</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teorema de Pitágoras -->
+
+    <section class="app section container-app" id="pitagoras">
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Teorema de Pitágoras</span>
+          <h2 class="titulo-secao inicial">Calculadora do Teorema de Pitágoras</h2>
+          <p class="descricao">
+            O teorema de Pitágoras é uma ferramenta fundamental em geometria para encontrar o comprimento da hipotenusa de um triângulo retângulo.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/7YeYeL2MjB4" frameborder="0" class="escala"></iframe>
+      </div>
+
+      <!-- Calculadora do Teorema de Pitágoras -->
+      <div class="container" id="calculadoraPitagoras"> 
+        <h1>Calculadora do Teorema de Pitágoras</h1>
+        <div class="grupo-formulario">
+          <label for="catetoA">Cateto A:</label>
+          <input type="number" id="catetoA" placeholder="Insira o valor do cateto A">
+        </div>
+        <div class="grupo-formulario">
+          <label for="catetoB">Cateto B:</label>
+          <input type="number" id="catetoB" placeholder="Insira o valor do cateto B">
+        </div>
+        <button onclick="calcularHipotenusa()">Calcular</button>
+        <div class="resultadoPitagoras hidden" id="resultadoPitagoras"></div>
+      </div>
+    </section>
+
+    <!-- Análise Combinatória -->
+
+    <section class="app section container-app" id="combinacao"> 
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Análise Combinatória</span>
+          <h2 class="titulo-secao inicial">Combinação Simples</h2>
+          <p class="descricao">
+            A combinação simples é um conceito importante na matemática que envolve escolher elementos sem considerar a ordem.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/064FUC0q3uU" frameborder="0" allowfullscreen class="escala"></iframe>
+      </div>
+
+      <!-- Calculadora de Combinação -->
+
+      <div class="container" id="calculadoraCombinacao"> 
+        <h1>Calculadora de Combinação</h1>
+        <div class="grupo-formulario">
+          <label for="elementos">Elementos:</label>
+          <input type="number" id="elementos" placeholder="Insira o número total de elementos">
+        </div>
+        <div class="grupo-formulario">
+          <label for="escolhas">Escolhas:</label>
+          <input type="number" id="escolhas" placeholder="Insira o número de escolhas">
+        </div>
+        <button onclick="calcularCombinação()">Calcular</button>
+        <div class="resultadoCombinacao hidden" id="resultadoCombinacao"></div>
+      </div>
+    </section>
+
+    <!-- Resolvedor de Cálculos Gerais -->
+
+    <section class="app section container-app" id="calculos-gerais"> 
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Resolvedor de Cálculos Gerais</span>
+          <h2 class="titulo-secao inicial">Calculadora Geral de Matemática</h2>
+          <p class="descricao">
+            Esta calculadora pode resolver uma ampla gama de cálculos matemáticos comuns.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/uaYFrtduFmI" frameborder="0" class="escala"></iframe>
+      </div>
+
+      <!-- Calculadora Geral de Matemática -->
+
+      <div class="container" id="calculadoraGeral"> 
+        <h1>Calculadora Geral de Matemática</h1>
+        <div class="grupo-formulario">
+          <label for="expressao">Expressão:</label>
+          <input type="text" id="expressao" placeholder="Insira a expressão matemática">
+        </div>
+        <button onclick="resolverCalculo()">Resolver</button>
+        <div class="resultadoGeral hidden" id="resultadoGeral"></div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato section container-contato" id="contato">
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="subtitulo inicial"></span>
+          <h2 class="titulo inicial">Gostou?</h2>
+          <p class="descricao">Venha conferir nosso Instagram. Iremos trazer mais novidades em breve. Bons estudos!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape section container-rodape">
+    <div class="container bd-grid">
+      <div class="conteudo">
+        <b class="logo">Atena<span>Matemática</span></b>
+        <span class="descricao">O melhor serviço pra você.</span>
+        <div class="social">
+          <a href="https://www.instagram.com/atenacalc_?igsh=MThnMGZiZHU1d2pqeA==" class="social-link" target="_blank"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copia">
+      &#169; Feito em 2024, por
+      <a href="" class="link">Renan,Vini,Natã e Guilherme</a>
+      
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    </p>
+  </footer>
+ <script> 
+ // Calculadora do Teorema de Pitágoras
+function calcularHipotenusa() {
+    let catetoA = parseFloat(document.getElementById('catetoA').value);
+    let catetoB = parseFloat(document.getElementById('catetoB').value);
+  
+    if (!isNaN(catetoA) && !isNaN(catetoB)) {
+      let hipotenusa = Math.sqrt(catetoA * catetoA + catetoB * catetoB);
+      document.getElementById('resultadoPitagoras').innerHTML = `A hipotenusa é: ${hipotenusa.toFixed(2)}`;
+      document.getElementById('resultadoPitagoras').classList.remove('hidden');
+    } else {
+      alert('Por favor, insira valores válidos para os catetos.');
+    }
+  }
+  
+  // Calculadora de Combinação
+  function calcularCombinação() {
+    let n = parseInt(document.getElementById('elementos').value);
+    let k = parseInt(document.getElementById('escolhas').value);
+  
+    if (!isNaN(n) && !isNaN(k)) {
+      if (k > n) {
+        alert('O número de escolhas não pode ser maior que o número total de elementos.');
+        return;
+      }
+  
+      let combinacao = calcularFatorial(n) / (calcularFatorial(k) * calcularFatorial(n - k));
+      document.getElementById('resultadoCombinacao').innerHTML = `Combinação (${n}, ${k}) = ${combinacao}`;
+      document.getElementById('resultadoCombinacao').classList.remove('hidden');
+    } else {
+      alert('Por favor, insira valores válidos para elementos e escolhas.');
+    }
+  }
+  
+  // Função auxiliar para calcular fatorial
+  function calcularFatorial(num) {
+    if (num === 0 || num === 1)
+      return 1;
+    for (let i = num - 1; i >= 1; i--) {
+      num *= i;
+    }
+    return num;
+  }
+  
+  // Resolvedor de Cálculos Gerais
+  function resolverCalculo() {
+    let expressao = document.getElementById('expressao').value;
+    
+    try {
+      let resultado = eval(expressao);
+      document.getElementById('resultadoGeral').innerHTML = `Resultado: ${resultado}`;
+      document.getElementById('resultadoGeral').classList.remove('hidden');
+    } catch (error) {
+      alert('Erro ao calcular a expressão. Verifique se a entrada é válida.');
+    }
+  }
+  
+</script>
+</body>
+</html>
